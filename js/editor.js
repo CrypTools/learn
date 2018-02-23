@@ -7,7 +7,7 @@ class Editor {
     }
     run(command) {
         const val = this.value()
-        const f = new Function(`${value}\n${command}`) // safe eval()
+        const f = new Function(`${val}\n${command}`) // safe eval()
         return f()
     }
 }
