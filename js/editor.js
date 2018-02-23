@@ -5,9 +5,9 @@ class Editor {
     value() {
         return this.ed.getValue() // the code written in the editor
     }
-    run(text, command) {
+    run(command) {
         const val = this.value()
-        const f = new Function(`${text}\n${command}`) // safe eval()
+        const f = new Function(`${value}\n${command}`) // safe eval()
         return f()
     }
 }
