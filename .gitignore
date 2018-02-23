@@ -57,3 +57,15 @@ typings/
 # dotenv environment variables file
 .env
 
+# Created by https://www.gitignore.io/api/sass,jekyll
+
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-metadata
+
+### Sass ###
+*.css.map
+
+
+# End of https://www.gitignore.io/api/sass,jekyll
