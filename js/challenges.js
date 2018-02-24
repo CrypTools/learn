@@ -47,11 +47,13 @@ class Test {
 	test() {
 		console.command("run tests")
 		let out = "";
+		let before = "";
 		for (let i = 0; i < this.data.tests.length; i++) {
 			const current = this.data.tests[i]
 			const command = eval("`" + this.data.testCommand + "`")
 			const result = editor.run(command)
 			const expected = current.expected;
+			before += `${current.word} -> ${result}<br>`
 			if (result == expected) {
 				out = out === false ? false : true
 			} else {
@@ -61,7 +63,7 @@ class Test {
 		if (out === true) {
 			console.log("Congratulations 🎉! The code you've written passed the tests.")
 		} else {
-			console.log("Argh 😤! You've failed! Try again...")
+			console.log(`${before}Argh 😤! You've failed! Try again...`)
 		}
 	}
 }
