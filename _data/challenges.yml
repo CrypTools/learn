@@ -42,3 +42,23 @@
 
      - word:     test
        expected: GRFG
+
+- name:          caesar-decrypt
+  fancy:         Caesar Decrypt
+  question:      caesar-decrypt.md
+  init:          >
+    String.prototype.decrypt = function(key) {
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:   return '${current.word}'.decrypt(${current.key})
+  tests:
+     - word:     LIPPS
+       key:      4
+       expected: HELLO
+
+     - word:     ETARVQQNU
+       key:      2
+       expected: CRYPTOOLS
+     - word:     YJXY
+       key:      5
+       expected: TEST
