@@ -21,7 +21,7 @@ class Router {
     load() {
         let question = document.querySelector(".questions")
         const converter = new showdown.Converter({extensions: ['github']})
-        fetch(`challenges/${this.page.question}`).then(data => data.text()).then(text => {
+        fetch(`../challenges/${this.page.question}`).then(data => data.text()).then(text => {
 			question.innerHTML = converter.makeHtml(text);
 		})
 

@@ -1,10 +1,12 @@
 # name:          the name of the cipher (no space)
+# fancy:         the fancy name
 # question:      the question file
 # init:          the default code to put in the editor
 # testCommand:   how to execute the code. uses `` pattern. current will contain the test data.
 # tests:         the test data
 
 - name:          caesar-encrypt
+  fancy:         Caesar Encrypt
   question:      caesar-encrypt.md
   init:          >
     String.prototype.encrypt = function(key) {
@@ -24,6 +26,7 @@
        expected: YJXY
 
 - name:          rot13
+  fancy:         ROT13
   question:      rot13.md
   init:          >
     String.prototype.encrypt = function(key) {
@@ -36,6 +39,6 @@
 
      - word:     cryptools
        expected: PELCGBBYF
-       
+
      - word:     test
        expected: GRFG

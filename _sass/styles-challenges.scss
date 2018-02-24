@@ -1,0 +1,100 @@
+/*====================================
+	Body
+=====================================*/
+body {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: top;
+	width: 100vw;
+	height: 100vh;
+	max-width: 100vw;
+	overflow: hidden;
+	font-family: 'Roboto Mono', monospace;
+
+	a {
+		color: inherit;
+	}
+}
+/*====================================
+	Header
+=====================================*/
+.header {
+	z-index: 999;
+	background-color: rgba(#000, .7);
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	transition: top 500ms ease-out, opacity 500ms ease-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 2px 4px -1px rgba(#000,.2), 0 4px 5px rgba(#000,.14), 0 1px 10px rgba(#000,.12);
+	width: 100vw;
+	.logo {
+		width: 96px;
+		height: 96px;
+		background-color: rgba(#000, .47);
+		background-image: url("https://cryptools.github.io/img/logo-white.svg");
+		background-repeat: no-repeat;
+		background-size: 50%;
+		background-position: center;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		color: #fff;
+
+		li {
+			display: inline-block;
+			margin-right: 48px;
+
+			a {
+				text-decoration: none;
+				line-height: 96px;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+/*====================================
+	Questions / course
+=====================================*/
+.questions {
+	margin-top: 96px;
+	width: 50vw;
+	overflow: auto;
+	padding: 40px;
+	box-sizing: border-box;
+}
+/*====================================
+	Editor + console
+=====================================*/
+.editor {
+	margin-top: 96px;
+	width: 50vw;
+	height: calc(67vh - 96px);
+	max-height: 100vh;
+	.CodeMirror {
+		height: 100% !important;
+		width: 100%;
+	}
+}
+
+.console {
+	width: 100%;
+	height: 100%;
+	max-width: calc(50vw - 40px);
+	max-height: calc(33vh - 40px);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	color: green;
+	padding: 20px;
+}

@@ -2,14 +2,8 @@
 	Body
 =====================================*/
 body {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: top;
 	width: 100vw;
-	height: 100vh;
-	max-width: 100vw;
-	overflow: hidden;
+	overflow-x: hidden;
 	font-family: 'Roboto Mono', monospace;
 
 	a {
@@ -32,7 +26,10 @@ body {
 	left: 0;
 	right: 0;
 	box-shadow: 0 2px 4px -1px rgba(#000,.2), 0 4px 5px rgba(#000,.14), 0 1px 10px rgba(#000,.12);
-	width: 100vw;
+	width: 960px;
+	max-width: 80%;
+	margin: 0 auto;
+
 	.logo {
 		width: 96px;
 		height: 96px;
@@ -42,6 +39,7 @@ body {
 		background-size: 50%;
 		background-position: center;
 	}
+
 	ul {
 		margin: 0;
 		padding: 0;
@@ -55,6 +53,7 @@ body {
 			a {
 				text-decoration: none;
 				line-height: 96px;
+
 				&:hover {
 					text-decoration: underline;
 				}
@@ -63,38 +62,103 @@ body {
 	}
 }
 /*====================================
-	Questions / course
-=====================================*/
-.questions {
+	Article
+====================================*/
+article {
 	margin-top: 96px;
-	width: 50vw;
-	overflow: auto;
-	padding: 40px;
-	box-sizing: border-box;
-}
-/*====================================
-	Editor + console
-=====================================*/
-.editor {
-	margin-top: 96px;
-	width: 50vw;
-	height: calc(67vh - 96px);
-	max-height: 100vh;
-	.CodeMirror {
-		height: 100% !important;
-		width: 100%;
-	}
-}
 
-.console {
-	width: 100%;
-	height: 100%;
-	max-width: calc(50vw - 40px);
-	max-height: calc(33vh - 40px);
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background: #000;
-	color: green;
-	padding: 20px;
+	section {
+		width: 100vw;
+		box-sizing: border-box;
+		padding: 50px;
+
+		&.what {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			width: 960px;
+			max-width: 80%;
+			margin: 0 auto;
+			height: calc(60vh - 96px);
+			margin: 0 auto;
+			text-align: right;
+
+			.logo {
+				width: 66.6vw;
+				height: 80vh;
+				background-image: url("https://cryptools.github.io/img/logo-black.svg");
+				background-repeat: no-repeat;
+				background-size: 50%;
+				background-position: center;
+			}
+
+			.left {
+				width: 50vw;
+			}
+		}
+
+		&.start {
+			background-color: #292929;
+			padding: 96px 0;
+			color: #fff;
+			box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2), 0 0 5px 4px rgba(0, 0, 0, 0.14), 0 0 10px 1px rgba(0, 0, 0, 0.12);
+			margin: 64px 0;
+
+			.container {
+				width: 960px;
+				max-width: 80%;
+				margin: 0 auto;
+
+				a {
+					box-sizing: border-box;
+					text-align: center;
+					display: inline-block;
+					padding: 12px 64px;
+					background-color: #fff;
+					color: #292929;
+					text-decoration: none;
+					margin-top: 48px;
+				}
+			}
+		}
+
+		&.levels {
+			width: 960px;
+			margin: 0 auto;
+			.row {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+
+				a {
+					text-decoration: none;
+					text-align: center;
+					position: relative;
+					padding: 32px 0 0;
+					width: 220px;
+					box-sizing: border-box;
+					margin: 10px;
+					vertical-align:top;
+					top: 0;
+					overflow: hidden;
+					border-radius: 4px;
+					box-shadow: 0 3px 1px -2px rgba(#000,.2), 0 2px 2px rgba(#000,.14), 0 1px 5px rgba(#000,.12);
+					transition: box-shadow 250ms ease, top 250ms ease;
+
+					&:hover {
+						box-shadow: 0 2px 4px -1px rgba(#000,.2), 0 4px 5px rgba(#000,.14), 0 1px 10px rgba(#000,.12);
+						top: -4px;
+					}
+
+					h3 {
+						color: #fff;
+						background-color: #292929;
+						margin: 32px 0 0;
+						padding: 24px 0;
+					}
+				}
+			}
+		}
+	}
 }

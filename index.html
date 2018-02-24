@@ -7,12 +7,36 @@ description: The best platform to learn cryptography
 	<a href="/" class="logo"></a>
 	<ul>
 		<li><a href="https://cryptools.github.io">Home</a></li>
-		<li><a href="#" id="run" >Run</a></li>
+		<li><a href="#start">Get Started</a></li>
+		<li><a href="#levels">Levels</a></li>
 	</ul>
 </div>
-<div class="questions markdown-body">
-
-</div>
-<div class="editor"></div>
-
-<div class="console"></div>
+<article>
+	<section class="what">
+		<div class="logo"></div>
+		<div class="left">
+			<h1>Welcome to the best platform to learn cryptography</h1>
+		</div>
+	</section>
+	<section class="start" id="#start">
+		<div class="container">
+			<h1>Getting Started</h1>
+			<p>
+				You know JavaScript and you want to learn cryptography? If this is true, then you're at the best place to make this dream a reality. Here you'll learn cryptography by completing some challenges.
+				<a href="#levels">
+					Get Started
+				</a>
+			</p>
+		</div>
+	</section>
+	<section id="levels" class="levels">
+		<div class="row">
+			{% for i in site.data.challenges %}
+				<a href="/levels#{{i.name}}">
+					<h1>#{{ forloop.index }}</h1>
+					<h3>{{i.fancy}}</h3>
+				</a>
+			{% endfor %}
+		</div>
+	</section>
+</article>
