@@ -125,6 +125,7 @@ article {
 
 		&.levels {
 			width: 960px;
+			max-width: 80%;
 			margin: 0 auto;
 			.row {
 				display: flex;
@@ -160,5 +161,81 @@ article {
 				}
 			}
 		}
+	}
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+	background-color: #292929;
+	padding: 32px 0;
+	color: #fff;
+	box-shadow: 0 0 4px 1px rgba(#000,.2), 0 0 5px 4px rgba(#000,.14), 0 0 10px 1px rgba(#000,.12);
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: right;
+		width: 960px;
+		max-width: 80%;
+		margin: 0 auto;
+		.logo {
+			padding: 64px 64px 64px 0;
+		}
+
+		.c {
+			font-family: sans-serif;
+		}
+
+		small {
+			font-size: 100%;
+			display: block;
+			color: rgba(#fff, .6);
+
+			i {
+				font-size: inherit;
+				color: #c62828;
+				position: relative;
+				top: 3px;
+			}
+		}
+	}
+}
+@media (max-width: 480px) {
+	footer .container {
+		flex-direction: column;
+		text-align: center;
+
+		.logo {
+			padding-left: 64px;
+		}
+	}
+}
+
+
+/*========================================
+	Be on a computer
+========================================*/
+
+.beoncomp {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: white;
+	z-index: 1000;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 10vw;
+	font-size: 20px;
+	text-align: center;
+	i {
+		font-size: 3em;
 	}
 }
