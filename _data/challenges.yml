@@ -22,3 +22,20 @@
      - word:     test
        key:      5
        expected: YJXY
+
+- name:          rot13
+  question:      rot13.md
+  init:          >
+    String.prototype.encrypt = function(key) {
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:   return '${current.word}'.encrypt()
+  tests:
+     - word:     Hello
+       expected: URYYB
+
+     - word:     cryptools
+       expected: PELCGBBYF
+       
+     - word:     test
+       expected: GRFG
