@@ -5,6 +5,11 @@ class Editor {
     value() {
         return this.ed.getValue() // the code written in the editor
     }
+    insert(text) {
+        const doc = this.ed.getDoc();
+        const cursor = doc.getCursor();
+        doc.replaceRange(text, cursor);
+    }
     run(command) {
         const val = this.value()
         const f = new Function(`${val}\n${command}`) // safe eval()

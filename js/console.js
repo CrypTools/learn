@@ -9,6 +9,9 @@ class Console {
 	log(text) {
 		this.el.innerHTML += text + "<br>$<br>"
 	}
+	warn() {
+		return null;
+	}
 }
 
 const outEl = document.querySelector(".console")

@@ -1,0 +1,15 @@
+- name:          caesar-encrypt
+  question:      caesar-encrypt.md
+  init:          >
+    String.prototype.encrypt = function(key) {
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:   return '${current.word}'.encrypt(${current.key})
+  tests:
+     - word:     Hello
+       key:      4
+       expected: LIPPS
+
+     - word:     cryptools
+       key:      2
+       expected: ETARVQQNU

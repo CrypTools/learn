@@ -68,7 +68,9 @@ body {
 .questions {
 	margin-top: 96px;
 	width: 50vw;
-	height: calc(100vw - 96px);
+	overflow: auto;
+	padding: 40px;
+	box-sizing: border-box;
 }
 /*====================================
 	Editor + console
