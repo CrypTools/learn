@@ -4,13 +4,16 @@ class Console {
 		this.clear()
 	}
 	clear() {
-		this.el.innerHTML = "$<br>"
+		this.el.innerHTML = "$"
 	}
 	log(text) {
-		this.el.innerHTML += text + "<br>$<br>"
+		this.el.innerHTML += `<br>${text}<br>$`
 	}
 	warn() {
 		return null;
+	}
+	command(text) {
+		this.el.innerHTML += ` ${text}`
 	}
 }
 

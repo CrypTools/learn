@@ -45,6 +45,7 @@ class Test {
 		})
 	}
 	test() {
+		console.command("run tests")
 		let out = "";
 		for (let i = 0; i < this.data.tests.length; i++) {
 			const current = this.data.tests[i]
