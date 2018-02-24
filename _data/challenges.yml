@@ -1,3 +1,9 @@
+# name:          the name of the cipher (no space)
+# question:      the question file
+# init:          the default code to put in the editor
+# testCommand:   how to execute the code. uses `` pattern. current will contain the test data.
+# tests:         the test data
+
 - name:          caesar-encrypt
   question:      caesar-encrypt.md
   init:          >
@@ -13,3 +19,6 @@
      - word:     cryptools
        key:      2
        expected: ETARVQQNU
+     - word:     test
+       key:      5
+       expected: YJXY
