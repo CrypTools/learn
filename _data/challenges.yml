@@ -5,6 +5,17 @@
 # testCommand:   how to execute the code. uses `` pattern. current will contain the test data.
 # tests:         the test data
 
+- name:          emojigraphy
+  fancy:         Emoji cipher
+  question:      emojigraphy.md
+  init:          >
+    String.prototype.encrypt = function(key) {
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:   return '${current.word}'.encrypt()
+  tests:
+      - word: message
+        expected: 😝😅😒😒😄😍😅
 - name:          caesar-encrypt
   fancy:         Caesar Encrypt
   question:      caesar-encrypt.md
