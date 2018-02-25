@@ -104,12 +104,12 @@
     String.prototype.encrypt = function(key) { // key is the number of rails
         // to get the String you need to encrypt, use 'this'
     }
-  testCommand:    return '${current.word}'.decrypt(${current.key})
+  testCommand:    return '${current.word}'.encrypt(${current.key})
   tests:
      - word:      Hello World!
        key:       key
        expected:  WzM3NDQyLDUyNDg4LDU1ODc0LDU2MDcyLDU3NDEwLDE3MTYwLDQ1MTIyLDU3NjA4LDU4OTQ2LDU2MDcyLDUxNzc4XQ==
-       
+
 
 # RSA
 - name:           rsa
