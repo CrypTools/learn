@@ -89,8 +89,8 @@ Steps 1 and 4 can be done with these tables :
 
 ## Requirements:
 
-- You're program should be case insensitive, and return only upper cased letters.
-- You're program should use this template:
+- Your program should be case insensitive, and return only upper cased letters.
+- Your program should use this template:
 
 ```javascript
 String.prototype.decrypt = function(key) {

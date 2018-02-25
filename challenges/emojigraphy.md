@@ -138,8 +138,8 @@ Here is the table:
 
 ## Requirements:
 
-- You're program should be case insensitive.
-- You're program should use this template:
+- Your program should be case insensitive.
+- Your program should use this template:
 
 ```javascript
 String.prototype.encrypt = function() {
