@@ -96,6 +96,21 @@
         key:      3
         expected: Horel ol!lwd
 
+# BitShift Cipher
+- name:           bitshift-encrypt
+  fancy:          BitShift Cipher
+  question:       bitshift-encrypt.md
+  init:           >
+    String.prototype.encrypt = function(key) { // key is the number of rails
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:    return '${current.word}'.decrypt(${current.key})
+  tests:
+     - word:      Hello World!
+       key:       key
+       expected:  WzM3NDQyLDUyNDg4LDU1ODc0LDU2MDcyLDU3NDEwLDE3MTYwLDQ1MTIyLDU3NjA4LDU4OTQ2LDU2MDcyLDUxNzc4XQ==
+       
+
 # RSA
 - name:           rsa
   fancy:          RSA
