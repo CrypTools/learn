@@ -1,6 +1,13 @@
 ## Introduction
 This is the first challenge of this platform. It's pretty easy, but don't worry, it will get harder in
 the next challenges.
+
+### Tutorial:
+- On this section, you'll always see the 'course' and the challenge that you need to do
+- On the upper right corner, there is the code editor. This is where you'll write your answer (in JavaScript of course).
+- On the lower right corner, you'll see the console. This is where you'll know if you failed or not.
+> **ProTips 💡:** Press `Ctrl+Enter` (or `Cmd + Enter` on macOS) to execute your code right from the editor.
+
 # Emoji cipher
 
 The Emoji cipher is a very basic cipher.
@@ -129,7 +136,7 @@ Here is the table:
 
 ## Requirements:
 
-- You're program should be case insensitive, and return only upper cased letters.
+- You're program should be case insensitive.
 - You're program should use this template:
 
 ```javascript
