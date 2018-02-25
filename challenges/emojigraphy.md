@@ -6,7 +6,9 @@ the next challenges.
 - On this section, you'll always see the 'course' and the challenge that you need to do
 - On the upper right corner, there is the code editor. This is where you'll write your answer (in JavaScript of course).
 - On the lower right corner, you'll see the console. This is where you'll know if you failed or not.
-> **ProTips 💡:** Press `Ctrl+Enter` (or `Cmd + Enter` on macOS) to execute your code right from the editor.
+> **ProTips 💡:**
+- Press `Ctrl+Enter` (or `Cmd + Enter` on macOS) to execute your code right from the editor.
+- Press `Shift+Enter` to enter full screen mode. (Press `Esc` to exit)
 
 # Emoji cipher
 

@@ -28,6 +28,14 @@ const editorEl = CodeMirror(document.querySelector(".editor"), {
     indentWithTabs: true,
     closeBrackets: true,
     viewportMargin: Infinity,
+    extraKeys: {
+        "Shift-Enter": function(cm) {
+            cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+        },
+        "Esc": function(cm) {
+            if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+        }
+    }
 });
 
 const editor = new Editor(editorEl)
