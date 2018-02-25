@@ -1,75 +1,88 @@
-# name:          the name of the cipher (no space)
-# fancy:         the fancy name
-# question:      the question file
-# init:          the default code to put in the editor
-# testCommand:   how to execute the code. uses `` pattern. current will contain the test data.
-# tests:         the test data
+# name:           the name of the cipher (no space)
+# fancy:          the fancy name
+# question:       the question file
+# init:           the default code to put in the editor
+# testCommand:    how to execute the code. uses `` pattern. current will contain the test data.
+# tests:          the test data
 
-- name:          emojigraphy
-  fancy:         Emoji cipher
-  question:      emojigraphy.md
-  init:          >
+- name:           emojigraphy
+  fancy:          Emoji cipher
+  question:       emojigraphy.md
+  init:           >
     String.prototype.encrypt = function() {
         // to get the String you need to encrypt, use 'this'
     }
-  testCommand:   return '${current.word}'.encrypt()
+  testCommand:    return '${current.word}'.encrypt()
   tests:
-      - word: message
+      - word:     message
         expected: 😝😅😒😒😄😍😅
-- name:          caesar-encrypt
-  fancy:         Caesar Encrypt
-  question:      caesar-encrypt.md
-  init:          >
+- name:           caesar-encrypt
+  fancy:          Caesar Encrypt
+  question:       caesar-encrypt.md
+  init:           >
     String.prototype.encrypt = function(key) {
         // to get the String you need to encrypt, use 'this'
     }
-  testCommand:   return '${current.word}'.encrypt(${current.key})
+  testCommand:    return '${current.word}'.encrypt(${current.key})
   tests:
-     - word:     Hello
-       key:      4
-       expected: LIPPS
+     - word:      Hello
+       key:       4
+       expected:  LIPPS
 
-     - word:     cryptools
-       key:      2
-       expected: ETARVQQNU
-     - word:     test
-       key:      5
-       expected: YJXY
+     - word:      cryptools
+       key:       2
+       expected:  ETARVQQNU
+     - word:      test
+       key:       5
+       expected:  YJXY
 
-- name:          rot13
-  fancy:         ROT13
-  question:      rot13.md
-  init:          >
+- name:           rot13
+  fancy:          ROT13
+  question:       rot13.md
+  init:           >
     String.prototype.encrypt = function() {
         // to get the String you need to encrypt, use 'this'
     }
-  testCommand:   return '${current.word}'.encrypt()
+  testCommand:    return '${current.word}'.encrypt()
   tests:
-     - word:     Hello
-       expected: URYYB
+     - word:      Hello
+       expected:  URYYB
 
-     - word:     cryptools
-       expected: PELCGBBYF
+     - word:      cryptools
+       expected:  PELCGBBYF
 
-     - word:     test
-       expected: GRFG
+     - word:      test
+       expected:  GRFG
 
-- name:          caesar-decrypt
-  fancy:         Caesar Decrypt
-  question:      caesar-decrypt.md
-  init:          >
+- name:           caesar-decrypt
+  fancy:          Caesar Decrypt
+  question:       caesar-decrypt.md
+  init:           >
     String.prototype.decrypt = function(key) {
         // to get the String you need to decrypt, use 'this'
     }
-  testCommand:   return '${current.word}'.decrypt(${current.key})
+  testCommand:    return '${current.word}'.decrypt(${current.key})
   tests:
-     - word:     LIPPS
-       key:      4
-       expected: HELLO
+     - word:      LIPPS
+       key:       4
+       expected:  HELLO
 
-     - word:     ETARVQQNU
-       key:      2
-       expected: CRYPTOOLS
-     - word:     YJXY
-       key:      5
-       expected: TEST
+     - word:      ETARVQQNU
+       key:       2
+       expected:  CRYPTOOLS
+     - word:      YJXY
+       key:       5
+       expected:  TEST
+
+
+- name:           rsa
+  fancy:          RSA
+  question:       rsa.md
+  init:           >
+    function rsa() {
+        return n // n is the answer
+    }
+  testCommand:    return rsa()
+  tests:
+     - word:      rsa()
+       expected:  399788195976
