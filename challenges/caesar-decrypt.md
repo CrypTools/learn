@@ -94,6 +94,6 @@ Steps 1 and 4 can be done with these tables :
 
 ```javascript
 String.prototype.decrypt = function(key) {
-    // to get the String you need to encrypt, use 'this'
+    // to get the String you need to decrypt, use 'this'
 }
 ```

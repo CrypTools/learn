@@ -59,7 +59,7 @@
   question:      caesar-decrypt.md
   init:          >
     String.prototype.decrypt = function(key) {
-        // to get the String you need to encrypt, use 'this'
+        // to get the String you need to decrypt, use 'this'
     }
   testCommand:   return '${current.word}'.decrypt(${current.key})
   tests:
