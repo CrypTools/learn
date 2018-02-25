@@ -127,15 +127,13 @@ article {
 			width: 960px;
 			max-width: 80%;
 			margin: 0 auto;
-
+			padding: 50px 0;
 			.row {
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;
-				position: relative;
+				width: 100%;
 				margin: 0 auto;
-				transform: translateX(-50px);
-				width: 960px;
 
 				a {
 					text-decoration: none;
