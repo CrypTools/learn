@@ -5,6 +5,8 @@
 # testCommand:    how to execute the code. uses `` pattern. current will contain the test data.
 # tests:          the test data
 
+
+# Emoji Cipher - Introduction
 - name:           emojigraphy
   fancy:          Emoji cipher
   question:       emojigraphy.md
@@ -16,6 +18,8 @@
   tests:
       - word:     message
         expected: 😝😅😒😒😄😍😅
+
+# Caesar Encrypt
 - name:           caesar-encrypt
   fancy:          Caesar Encrypt
   question:       caesar-encrypt.md
@@ -36,6 +40,8 @@
        key:       5
        expected:  YJXY
 
+
+# ROT13
 - name:           rot13
   fancy:          ROT13
   question:       rot13.md
@@ -54,6 +60,8 @@
      - word:      test
        expected:  GRFG
 
+
+# Caesar Decrypt
 - name:           caesar-decrypt
   fancy:          Caesar Decrypt
   question:       caesar-decrypt.md
@@ -74,6 +82,7 @@
        key:       5
        expected:  TEST
 
+# Railfence Encrypt
 - name:           railfence-encrypt
   fancy:          Rail Fence Encrypt
   question:       railfence-encrypt.md
@@ -86,7 +95,8 @@
       - word:     Hello World!
         key:      3
         expected: Horel ol!lwd
-        
+
+# RSA
 - name:           rsa
   fancy:          RSA
   question:       rsa.md
