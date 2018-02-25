@@ -74,7 +74,19 @@
        key:       5
        expected:  TEST
 
-
+- name:           railfence-encrypt
+  fancy:          Rail Fence Encrypt
+  question:       railfence-encrypt.md
+  init:           >
+    String.prototype.encrypt = function(key) { // key is the number of rails
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:    return '${current.word}'.decrypt(${current.key})
+  tests:
+      - word:     Hello World!
+        key:      3
+        expected: Horel ol!lwd
+        
 - name:           rsa
   fancy:          RSA
   question:       rsa.md
