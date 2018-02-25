@@ -104,7 +104,7 @@
     String.prototype.encrypt = function(key) { // key is the number of rails
         // to get the String you need to encrypt, use 'this'
     }
-  testCommand:    return '${current.word}'.encrypt(${current.key})
+  testCommand:    return '${current.word}'.encrypt('${current.key}')
   tests:
      - word:      Hello World!
        key:       key
