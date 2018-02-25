@@ -127,10 +127,15 @@ article {
 			width: 960px;
 			max-width: 80%;
 			margin: 0 auto;
+
 			.row {
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;
+				position: relative;
+				margin: 0 auto;
+				transform: translateX(-50px);
+				width: 960px;
 
 				a {
 					text-decoration: none;
@@ -140,7 +145,7 @@ article {
 					width: 220px;
 					box-sizing: border-box;
 					margin: 10px;
-					vertical-align:top;
+					vertical-align: top;
 					top: 0;
 					overflow: hidden;
 					border-radius: 4px;
@@ -163,7 +168,6 @@ article {
 		}
 	}
 }
-
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -181,6 +185,7 @@ footer {
 		width: 960px;
 		max-width: 80%;
 		margin: 0 auto;
+
 		.logo {
 			padding: 64px 64px 64px 0;
 		}
@@ -213,12 +218,9 @@ footer {
 		}
 	}
 }
-
-
 /*========================================
 	Be on a computer
 ========================================*/
-
 .beoncomp {
 	position: fixed;
 	top: 0;
@@ -235,6 +237,7 @@ footer {
 	padding: 10vw;
 	font-size: 20px;
 	text-align: center;
+
 	i {
 		font-size: 3em;
 	}
