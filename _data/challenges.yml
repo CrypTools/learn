@@ -9,7 +9,7 @@
   fancy:         Emoji cipher
   question:      emojigraphy.md
   init:          >
-    String.prototype.encrypt = function(key) {
+    String.prototype.encrypt = function() {
         // to get the String you need to encrypt, use 'this'
     }
   testCommand:   return '${current.word}'.encrypt()
@@ -40,7 +40,7 @@
   fancy:         ROT13
   question:      rot13.md
   init:          >
-    String.prototype.encrypt = function(key) {
+    String.prototype.encrypt = function() {
         // to get the String you need to encrypt, use 'this'
     }
   testCommand:   return '${current.word}'.encrypt()

@@ -140,7 +140,7 @@ Here is the table:
 - You're program should use this template:
 
 ```javascript
-String.prototype.encrypt = function(key) {
+String.prototype.encrypt = function() {
     // to get the String you need to encrypt, use 'this'
 }
 ```
