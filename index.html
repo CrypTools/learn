@@ -40,10 +40,20 @@ description: The best platform to learn cryptography
 		</div>
 	</section>
 	<section id="levels" class="levels">
-		<h3>Levels:</h3>
+		<h2>Levels:</h2>
+		<h3>For JavaScript developers</h3>
 		<div class="row">
 			{% for i in site.data.challenges %}
 				<a href="./levels#{{i.name}}">
+					<h1>#{{ forloop.index }}</h1>
+					<h3>{{i.fancy}}</h3>
+				</a>
+			{% endfor %}
+		</div>
+		<h3>For noobs (all the others)</h3>
+		<div class="row">
+			{% for i in site.data.noob %}
+				<a href="./noob#{{i.name}}">
 					<h1>#{{ forloop.index }}</h1>
 					<h3>{{i.fancy}}</h3>
 				</a>

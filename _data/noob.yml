@@ -1,0 +1,9 @@
+# name:     the name of the cipher (no space)
+# fancy:    the fancy name
+# question: the question file
+# answer:   the answer
+
+- name:     caesar-encrypt
+  fancy:    Caesar Encrypt
+  question: caesar-encrypt.md
+  answer:   LIPPS
