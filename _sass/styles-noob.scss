@@ -70,6 +70,7 @@ body {
 	overflow: auto;
 	padding: 40px;
 	box-sizing: border-box;
+	height: calc(100vh - 96px);
 }
 
 /*===================================
@@ -82,9 +83,22 @@ body {
 	align-items: center;
 	margin-top: 96px;
 	width: 50vw;
-	height: calc(100vh - 96px);
 	.out {
 		position: absolute;
 		top: calc(50vh + 120px);
+	}
+}
+
+@media (max-width: 1000px) {
+	body {
+		flex-direction: column;
+	}
+	.questions {
+		width: 100vw;
+		height: calc(50vh - 96px);
+	}
+	.answer {
+		width: 100vw;
+		height: calc(50vh - 96px);
 	}
 }
