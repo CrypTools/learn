@@ -3,21 +3,17 @@ layout: html
 title: CrypTools - Learn
 description: The best platform to learn cryptography
 ---
+<nav class="container">
+    <a href="/" class="logo"></a>
+    <button id="menu-toggle"><i class="material-icons">menu</i></button>
+    <ul>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#ciphers">Ciphers</a></li>
+        <li><a href="#join">Want to help?</a></li>
+        <li><a href="https://github.com/cryptools">GitHub</a></li>
+    </ul>
+</nav>
 
-<div class="beoncomp">
-	<i class="material-icons">computer</i>
-	<p>
-		This website is not optimized for mobile devices. Please try to reload it on a computer.
-	</p>
-</div>
-<div class="header">
-	<a href="../" class="logo"></a>
-	<ul>
-		<li><a href="https://cryptools.github.io">Home</a></li>
-		<li><a href="#start">Get Started</a></li>
-		<li><a href="#levels">Levels</a></li>
-	</ul>
-</div>
 <article>
 	<section class="what">
 		<div class="logo"></div>
@@ -49,6 +45,12 @@ description: The best platform to learn cryptography
 					<h3>{{i.fancy}}</h3>
 				</a>
 			{% endfor %}
+		</div>
+		<div class="beoncomp">
+			<i class="material-icons">computer</i>
+			<p>
+				This section is not optimized for mobile devices. Please try on a computer.
+			</p>
 		</div>
 		<h3>For noobs (all the others)</h3>
 		<div class="row">
