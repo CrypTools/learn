@@ -7,12 +7,37 @@ A simple adaptive cipher based on the logical XOR operation.
 
 The XOR cipher will encrypt a message by using the Boolean XOR (exclusive or) operation. A XOR B returns 1 if and only if A and B are different.
 
-| A | B | A XOR B |
-|---|---|---------|
-| 0 | 0 |    0    |
-| 0 | 1 |    1    |
-| 1 | 0 |    1    |
-| 1 | 1 |    0    |
+<table>
+	<thead>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+			<th>A XOR B</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>0</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+	</tbody>
+</table>
 
 To encrypt a message with a given key, we first convert the string into their ASCII equivalent, and we then XOR every character with the key. For example, if we want to encrypt XOR with 134 as a key, we would do:
 
