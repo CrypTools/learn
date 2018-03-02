@@ -3,6 +3,10 @@
 # question: the question file
 # answer:   the answer
 
+- name:     emojigraphy
+  fancy:    Emoji Cipher
+  question: emojigraphy.md
+  answer:   😅😝😳😗😚
 - name:     caesar-encrypt
   fancy:    Caesar Encrypt
   question: caesar-encrypt.md
