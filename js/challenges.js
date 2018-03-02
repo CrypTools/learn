@@ -62,6 +62,9 @@ class Test {
 		}
 		if (out === true) {
 			console.log("Congratulations 🎉! The code you've written passed the tests.")
+			setTimeout(() => {
+				document.querySelector(".done").classList.add("active")
+			}, 1000)
 		} else {
 			console.log(`${before}Argh 😤! You've failed! Try again...`)
 		}

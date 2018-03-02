@@ -97,3 +97,36 @@ body {
 	color: green;
 	padding: 20px;
 }
+
+
+/*======================================================================
+	Well Done section
+=======================================================================*/
+
+.done {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+	background: white;
+	transition: all 500ms ease-in-out;
+	&.active {
+		transform: translateY(-100vh);
+	}
+	.continue {
+		font-size: 3em;
+		transition: font-size 100ms ease-in-out;
+		i {
+			font-size: inherit;
+		}
+		&:hover {
+			font-size: 3.5em;
+		}
+	}
+}
