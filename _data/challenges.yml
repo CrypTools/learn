@@ -110,6 +110,22 @@
        key:       key
        expected:  WzM3NDQyLDUyNDg4LDU1ODc0LDU2MDcyLDU3NDEwLDE3MTYwLDQ1MTIyLDU3NjA4LDU4OTQ2LDU2MDcyLDUxNzc4XQ==
 
+# XORCipher
+- name:           xor
+  fancy:          XOR Cipher
+  question:       xorcipher.md
+  init:           >
+    String.prototype.encrypt = function(key) { // key is a number or an array
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:    return '${current.word}'.encrypt(${current.key})
+  tests:
+     - word:      Hello World!
+       key:       134
+       expected:  Îãêêé¦Ñéôêâ§
+     - word:      CrypTools
+       key:       873
+       expected:  ̛̪̙̐̽̆̆̅̚
 
 # RSA
 - name:           rsa
