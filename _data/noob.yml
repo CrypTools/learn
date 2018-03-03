@@ -15,3 +15,7 @@
   fancy:    RSA
   question: rsa.md
   answer:   399788195976
+- name:     hashshift
+  fancy:    HashShift PRNG
+  question: hashshift.md
+  answer:   0.3047871109
