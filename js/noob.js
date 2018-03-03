@@ -53,6 +53,7 @@ class Test {
 		if (this.data.answer == ans) {
 			out.style.color = "green"
 			out.innerHTML = "Congratulations 🎉! Your answer is correct ✅"
+			document.querySelector(".done").style.display = "flex"
 			setTimeout(() => {
 				document.querySelector(".done").classList.add("active")
 			}, 1000)

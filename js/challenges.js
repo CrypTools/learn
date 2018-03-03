@@ -62,6 +62,7 @@ class Test {
 		}
 		if (out === true) {
 			console.log("Congratulations 🎉! The code you've written passed the tests.")
+			document.querySelector(".done").style.display = "flex"
 			setTimeout(() => {
 				document.querySelector(".done").classList.add("active")
 			}, 1000)
