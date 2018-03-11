@@ -82,6 +82,15 @@ nav {
 	nav.container {
 		max-width: 100%;
 	}
+	article {
+		margin-top: calc(96px + 30vh)
+	}
+	.levels {
+		margin-top: calc(96px + 30vh) !important;
+	}
+	footer {
+		margin-top: calc(96px + 30vh)
+	}
 }
 @media (max-width: 740px) {
 	nav {
@@ -131,7 +140,8 @@ nav {
 	Article
 ====================================*/
 article {
-	margin-top: 96px;
+	position: relative;
+	top: 96px;
 
 	section {
 		width: 100vw;
@@ -142,49 +152,33 @@ article {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			flex-direction: row;
+			flex-direction: column;
 			width: 960px;
 			max-width: 80%;
 			margin: 0 auto;
 			height: calc(60vh - 96px);
 			margin: 0 auto;
-			text-align: right;
-
-			.logo {
-				width: 66.6vw;
-				height: 80vh;
-				background-image: url("https://cryptools.github.io/img/logo-black.svg");
-				background-repeat: no-repeat;
-				background-size: 50%;
-				background-position: center;
-			}
-
-			.left {
-				width: 50vw;
-			}
-		}
-
-		&.start {
-			background-color: #292929;
-			padding: 96px 0;
-			color: #fff;
-			box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2), 0 0 5px 4px rgba(0, 0, 0, 0.14), 0 0 10px 1px rgba(0, 0, 0, 0.12);
-			margin: 64px 0;
-
-			.container {
-				width: 960px;
-				max-width: 80%;
-				margin: 0 auto;
-
+			text-align: left;
+			p {
+				margin-top: 10px;
+				text-align: justify;
 				a {
 					box-sizing: border-box;
 					text-align: center;
 					display: inline-block;
 					padding: 12px 64px;
-					background-color: #fff;
-					color: #292929;
-					text-decoration: none;
+					background-color: #292929;
+					color: #fff;
+					text-decoration: inherit;
 					margin-top: 48px;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				span.italic {
+					margin-top: 20px;
+					font-style: italic;
+					opacity: 0.7;
 				}
 			}
 		}

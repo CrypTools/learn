@@ -16,34 +16,37 @@ description: The best platform to learn cryptography
 
 <article>
 	<section class="what">
-		<div class="logo"></div>
-		<div class="left">
-			<h1>Welcome to the best platform to learn cryptography</h1>
-		</div>
-	</section>
-	<section class="start" id="#start">
-		<div class="container">
-			<h1>Getting Started</h1>
-			<p>
-				You know JavaScript and you want to learn cryptography? If this is true, then you're at
-				the best place to make this dream a reality. Here you'll learn cryptography by completing
-				some challenges.
-				<br>
-				<a href="#levels">
-					Get Started
-				</a>
-			</p>
-		</div>
+		<h1>Welcome to the best platform to learn cryptography</h1>
+		<p>
+			Cryptography is the art of writing and solving problems inorder to prevent third parties or the public from reading private messages.
+			And as any art, it can be teached. This was our mission by creating this platform. You'll have some challenges to complete, the first ones
+			are easy, but don't worry, it will get much harder after some point.
+			<br><br>
+			<span class="italic">- CrypTools</span>
+			<br>
+			<a href="#levels">
+				Get Started
+			</a>
+		</p>
 	</section>
 	<section id="levels" class="levels">
 		<h2>Levels:</h2>
-		<h3>For JavaScript developers</h3>
+		<h3>You don't know code?</h3>
+		<div class="row">
+			{% for i in site.data.noob %}
+			<a href="./noob#{{i.name}}">
+				<h1>#{{ forloop.index }}</h1>
+				<h3>{{i.fancy}}</h3>
+			</a>
+			{% endfor %}
+		</div>
+		<h3>Know JavaScript?</h3>
 		<div class="row">
 			{% for i in site.data.challenges %}
-				<a href="./levels#{{i.name}}">
-					<h1>#{{ forloop.index }}</h1>
-					<h3>{{i.fancy}}</h3>
-				</a>
+			<a href="./levels#{{i.name}}">
+				<h1>#{{ forloop.index }}</h1>
+				<h3>{{i.fancy}}</h3>
+			</a>
 			{% endfor %}
 		</div>
 		<div class="beoncomp">
@@ -51,15 +54,6 @@ description: The best platform to learn cryptography
 			<p>
 				This section is not optimized for mobile devices. Please try on a computer.
 			</p>
-		</div>
-		<h3>For noobs (all the others)</h3>
-		<div class="row">
-			{% for i in site.data.noob %}
-				<a href="./noob#{{i.name}}">
-					<h1>#{{ forloop.index }}</h1>
-					<h3>{{i.fancy}}</h3>
-				</a>
-			{% endfor %}
 		</div>
 	</section>
 </article>
