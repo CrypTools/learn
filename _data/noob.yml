@@ -23,3 +23,7 @@
   fancy:    HashShift PRNG
   question: hashshift.md
   answer:   0.3047871109
+- name:     base64
+  fancy:    Base64
+  question: b64.md
+  answer:   Q3J5cFRvb2xz
