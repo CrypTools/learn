@@ -15,6 +15,10 @@
   fancy:    ATBASHCipher
   question: inverse.md
   answer:   XIBKGLLOH
+- name:     railfence
+  fancy:    Railfence
+  question: railfence.md
+  answer:   TCth i heepta chotRnen eaer srif seulic
 - name:     rsa
   fancy:    RSA
   question: rsa.md
