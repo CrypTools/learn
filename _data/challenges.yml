@@ -139,3 +139,19 @@
   tests:
      - word:      rsa()
        expected:  399788195976
+# Base64
+- name:           b64
+  fancy:          Base64
+  question:       b64.md
+  init:           >
+    String.prototype.decrypt = function() {
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:    return '${current.word}'.decrypt()
+  tests:
+     - word:      SGVsbG8gV29ybGQh
+       expected:  Hello World!
+     - word:      Q3J5cFRvb2xz
+       expected:  CrypTools
+     - word:      YmFzZQ==
+       expected:  base
