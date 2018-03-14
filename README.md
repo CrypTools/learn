@@ -20,15 +20,11 @@
 - [Jekyll](https://jekyllrb.com) - website generator
 - [Sass](https://sass-lang.com) - stylesheets
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/cryptools/cryptools.github.io/tags).
-
 ## Authors
 
 Made with ❤️ at CrypTools.
 
-See also the list of [contributors](https://github.com/CrypTools/cryptools.github.io/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/CrypTools/learn/contributors) who participated in this project.
 
 ## License
 
