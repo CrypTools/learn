@@ -31,3 +31,7 @@
   fancy:    Base64
   question: b64.md
   answer:   Q3J5cFRvb2xz
+- name:     bitshift
+  fancy:    BitShift Cipher
+  question: bitshift.md
+  answer:   "[17843008, 30152208, 31998784, 29627920, 22299456, 29365776, 29377344, 28579344, 30425920]"
