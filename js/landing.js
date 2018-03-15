@@ -49,3 +49,12 @@ class Menu {
 }
 
 var m = new Menu()
+
+
+document.querySelectorAll(".row > a").forEach(el => {
+	el.addEventListener("click", e => {
+		e.preventDefault();
+		window.open(el.href, "_blank")
+		window.close()
+	})
+})
