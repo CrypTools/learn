@@ -10,7 +10,12 @@ for (let i of challengesData) {
 }
 class Router {
     constructor() {
-        const hash = window.location.hash.substring(1);
+		let hash;
+		if (localStorage.getItem("CrypToolsLearn")) {
+			hash = localStorage.getItem("CrypToolsLearn").substring(1);
+		} else {
+		 	hash = window.location.hash.substring(1);
+		}
         if (hash == "") {
             this.page = challenges["caesar-encrypt"] // level 1
         } else {
