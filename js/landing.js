@@ -54,6 +54,7 @@ var m = new Menu()
 document.querySelectorAll(".row > a").forEach(el => {
 	el.addEventListener("click", e => {
 		e.preventDefault();
+		localStorage.setItem("CrypToolsLearn", el.hash)
 		window.open(el.href, "_blank")
 		window.close()
 	})
