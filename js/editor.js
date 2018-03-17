@@ -1,9 +1,11 @@
+---
+---
 class Editor {
     constructor(el) {
         this.ed = el;
     }
     value() {
-        return this.ed.getValue() // the code written in the editor
+        return this.ed.getValue() /* the code written in the editor */
     }
     insert(text) {
         const doc = this.ed.getDoc();
@@ -12,7 +14,7 @@ class Editor {
     }
     run(command) {
         const val = this.value()
-        const f = new Function(`${val}\n${command}`) // safe eval()
+        const f = new Function(`${val}\n${command}`) /* safe eval() */
         return f()
     }
 }

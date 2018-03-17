@@ -1,3 +1,5 @@
+---
+---
 class Console {
 	constructor(el) {
 		this.el = el;
