@@ -35,3 +35,7 @@
   fancy:    BitShift Cipher
   question: bitshift.md
   answer:   "[17843008, 30152208, 31998784, 29627920, 22299456, 29365776, 29377344, 28579344, 30425920]"
+- name:     randomness
+  fancy:    Randomness
+  question: randomness.md
+  answer:   61647
