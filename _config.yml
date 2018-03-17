@@ -1,9 +1,12 @@
-markdown: kramdown
+# Building docs because GH Page is built using --safe
+destination: docs
+
+markdown:    kramdown
 highlighter: rouge
 
-permalink: pretty
+permalink:   pretty
 
-url: cryptools.github.io/learn
+url:         cryptools.github.io/learn
 
 plugins:
     - jekyll-babel
