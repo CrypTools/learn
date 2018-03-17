@@ -17,7 +17,7 @@ class Router {
 		 	hash = window.location.hash.substring(1);
 		}
         if (hash == "") {
-            this.page = challenges["caesar-encrypt"] /* level 1 */
+            this.page = challenges["emojigraphy"] /* level 1 */
         } else {
             this.page = challenges[hash]
         }
