@@ -1,4 +1,6 @@
 # BitShift Cipher
+> ⚠️ We strongly recommend you to know how to program in at least one programming language.
+
 ## How it works
 
 ### Encoding
