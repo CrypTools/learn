@@ -19,6 +19,10 @@
   fancy:    Railfence
   question: railfence.md
   answer:   TCth i heepta chotRnen eaer srif seulic
+- name:     binascii
+  fancy:    BinASCII
+  question: binascii.md
+  answer:   01100011 01101111 01100100 01100101  
 - name:     rsa
   fancy:    RSA
   question: rsa.md
