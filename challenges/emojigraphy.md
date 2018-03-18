@@ -9,6 +9,7 @@ the next challenges.
 > **ProTips 💡:**
 - Press `Ctrl+Enter` (or `Cmd + Enter` on macOS) to execute your code right from the editor.
 - Press `Shift+Enter` to enter full screen mode. (Press `Esc` to exit)
+- Press `Ctrl+Shift+C` (or `Cmd + Shift + C` on macOS) to clear the console
 
 # Emoji cipher
 
