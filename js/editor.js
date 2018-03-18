@@ -15,7 +15,14 @@ class Editor {
     run(command) {
         const val = this.value()
         const f = new Function(`${val}\n${command}`) /* safe eval() */
-        return f()
+		let out;
+		try {
+			out = f()
+		} catch (e) {
+			out = e
+		} finally {
+			return out;
+		}
     }
 }
 
