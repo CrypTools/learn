@@ -4,23 +4,22 @@ title: CrypTools - Learn
 description: The best platform to learn cryptography
 ---
 <nav class="container">
-    <a href="/" class="logo"></a>
+	<a href="/" class="logo"></a>
 	<p><a href="./">/learn</a></p>
-    <button id="menu-toggle"><i class="material-icons">menu</i></button>
-    <ul>
+	<button id="menu-toggle"><i class="material-icons">menu</i></button>
+	<ul>
 		<li><a href="https://cryptools.github.io">Home</a></li>
-        <li><a href="#levels">Levels</a></li>
-        <li><a href="https://github.com/cryptools">GitHub</a></li>
-    </ul>
+		<li><a href="#levels">Levels</a></li>
+		<li><a href="https://github.com/cryptools">GitHub</a></li>
+	</ul>
 </nav>
 
 <article>
 	<section class="what">
 		<h1>Welcome to the best platform to learn cryptography</h1>
 		<p>
-			Cryptography is the art of writing and solving problems in order to prevent third parties or the public from reading private messages.
-			And as any art, it can be taught. This was our mission by creating this platform. You'll have some challenges to complete, the first ones
-			are easy, but don't worry, it will get much harder after some point.
+			Cryptography is the art of writing and solving problems in order to prevent third parties or the public from reading private messages. And as any art, it can be taught. This was our mission by creating this platform. You'll have some challenges to complete,
+			the first ones are easy, but don't worry, it will get much harder after some point.
 			<br><br>
 			<span class="italic">- CrypTools</span>
 			<br>
@@ -32,7 +31,7 @@ description: The best platform to learn cryptography
 	<section id="levels" class="levels">
 		<h2>Levels:</h2>
 		<h3>You don't know code?</h3>
-		<div class="row">
+		<div class="row noob">
 			{% for i in site.data.noob %}
 			<a href="./noob#{{i.name}}" target="_blank">
 				<h1>#{{ forloop.index }}</h1>
@@ -40,14 +39,24 @@ description: The best platform to learn cryptography
 			</a>
 			{% endfor %}
 		</div>
+		<div class="expand">
+			<div class="more" id="0">
+				More <i class="material-icons">expand_more</i>
+			</div>
+		</div>
 		<h3>Know JavaScript?</h3>
-		<div class="row">
+		<div class="row js">
 			{% for i in site.data.challenges %}
 			<a href="./levels#{{i.name}}" target="_blank">
 				<h1>#{{ forloop.index }}</h1>
 				<h3>{{i.fancy}}</h3>
 			</a>
 			{% endfor %}
+		</div>
+		<div class="expand">
+			<div class="more" id="1">
+				More <i class="material-icons">expand_more</i>
+			</div>
 		</div>
 		<div class="beoncomp">
 			<i class="material-icons">computer</i>
@@ -58,17 +67,17 @@ description: The best platform to learn cryptography
 	</section>
 </article>
 <footer>
-    <div class="container">
-        <img src="https://cryptools.github.io/img/logo-white.svg" alt="Cryptools" class="logo">
-        <p>
-            Copyright <span class="c">&copy;</span> <span class="year"></span> CrypTools. All Rights Reserved.
-            <small>
+	<div class="container">
+		<img src="https://cryptools.github.io/img/logo-white.svg" alt="Cryptools" class="logo">
+		<p>
+			Copyright <span class="c">&copy;</span> <span class="year"></span> CrypTools. All Rights Reserved.
+			<small>
                 Made with <i class="material-icons">favorite</i> at <a href="https://github.com/CrypTools/cryptools.github.io/graphs/contributors">CrypTools</a>
             </small>
-        </p>
-    </div>
+		</p>
+	</div>
 </footer>
 
 <script>
-    document.querySelector('.year').innerHTML = new Date().getFullYear()
+	document.querySelector('.year').innerHTML = new Date().getFullYear()
 </script>

@@ -29,6 +29,7 @@ nav {
 	width: 960px;
 	max-width: 80%;
 	margin: 0 auto;
+
 	.logo {
 		width: 96px;
 		height: 96px;
@@ -38,6 +39,7 @@ nav {
 		background-size: 50%;
 		background-position: center;
 	}
+
 	p {
 		color: white;
 		position: absolute;
@@ -45,13 +47,16 @@ nav {
 		line-height: 96px;
 		font-size: 30px;
 		margin: 0;
+
 		a {
 			text-decoration: none;
 		}
+
 		a:hover {
 			text-decoration: underline;
 		}
 	}
+
 	#menu-toggle {
 		background-color: transparent;
 		border: none;
@@ -82,14 +87,17 @@ nav {
 	nav.container {
 		max-width: 100%;
 	}
+
 	article {
-		margin-top: calc(96px + 35vh)
+		margin-top: calc(96px + 35vh);
 	}
+
 	.levels {
 		margin-top: calc(96px + 35vh) !important;
 	}
+
 	footer {
-		margin-top: calc(96px + 35vh)
+		margin-top: calc(96px + 35vh);
 	}
 }
 @media (max-width: 740px) {
@@ -159,9 +167,11 @@ article {
 			height: calc(60vh - 96px);
 			margin: 0 auto;
 			text-align: left;
+
 			p {
 				margin-top: 10px;
 				text-align: justify;
+
 				a {
 					box-sizing: border-box;
 					text-align: center;
@@ -171,10 +181,12 @@ article {
 					color: #fff;
 					text-decoration: inherit;
 					margin-top: 48px;
+
 					&:hover {
 						text-decoration: underline;
 					}
 				}
+
 				span.italic {
 					margin-top: 20px;
 					font-style: italic;
@@ -188,6 +200,7 @@ article {
 			max-width: 80%;
 			margin: 0 auto;
 			padding: 50px 0;
+
 			.row {
 				display: flex;
 				flex-direction: row;
@@ -223,6 +236,33 @@ article {
 					}
 				}
 			}
+
+			.expand {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.more {
+					display: inline-flex;
+					vertical-align: middle;
+					align-items: center;
+					margin: 0 auto;
+					box-sizing: border-box;
+					text-align: center;
+					padding: 12px 64px;
+					background-color: #292929;
+					color: #fff;
+					text-decoration: inherit;
+					margin-top: 48px;
+					cursor: pointer;
+					transition: all 250ms ease, top 250ms ease;
+
+					&:hover {
+						box-shadow: 0 2px 4px -1px rgba(#000,.2), 0 4px 5px rgba(#000,.14), 0 1px 10px rgba(#000,.12);
+						top: -4px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -235,6 +275,7 @@ footer {
 	color: #fff;
 	box-shadow: 0 0 4px 1px rgba(#000,.2), 0 0 5px 4px rgba(#000,.14), 0 0 10px 1px rgba(#000,.12);
 	margin-top: 96px;
+
 	.container {
 		display: flex;
 		justify-content: space-between;

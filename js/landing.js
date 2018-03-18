@@ -8,19 +8,20 @@ function detectmob() {
     }
 }
 if (detectmob()) {
-	document.querySelector(".beoncomp").style.display = "flex";
-	document.querySelectorAll(".row")[1].style.display = "none"
+    document.querySelector(".beoncomp").style.display = "flex";
+    document.querySelectorAll(".row")[1].style.display = "none"
+	document.querySelectorAll(".exapnd")[1].style.display = "none"
 }
 
 
 class Menu {
     constructor() {
-        this.state  = false
-        this.toggle = document.getElementById('menu-toggle')
-        this.links  = document.querySelectorAll('nav ul a')
-        this.ul     = document.querySelector('nav ul')
+        this.state = false
+        this.toggle = document.getElementById("menu-toggle")
+        this.links = document.querySelectorAll("nav ul a")
+        this.ul = document.querySelector("nav ul")
 
-        this.open   = this.open.bind(this)
+		this.open   = this.open.bind(this)
         this.close  = this.close.bind(this)
         this.swap   = this.swap.bind(this)
 
@@ -28,19 +29,19 @@ class Menu {
     }
 
     _addEventListeners() {
-        this.links.forEach(l => l.addEventListener('click', this.close))
-        this.toggle.addEventListener('click', this.swap)
-        window.addEventListener('scroll', this.close)
-        window.addEventListener('resize', this.close)
+        this.links.forEach(l => l.addEventListener("click", this.close))
+        this.toggle.addEventListener("click", this.swap)
+        window.addEventListener("scroll", this.close)
+        window.addEventListener("resize", this.close)
     }
 
     open() {
-        this.ul.classList.add('active')
+        this.ul.classList.add("active")
         this.state = true
     }
 
     close() {
-        this.ul.classList.remove('active')
+        this.ul.classList.remove("active")
         this.state = false
     }
 
@@ -50,13 +51,63 @@ class Menu {
     }
 }
 
-var m = new Menu()
+const m = new Menu();
 
+class Expand {
+    constructor() {
+        this.state = false;
+        this.toggles = document.querySelectorAll(".expand > .more");
+
+		const noob = document.querySelectorAll(".noob > *")
+		const js = document.querySelectorAll(".js > *")
+		let noobItems = [];
+		for (let i = 0; i < noob.length - 8; i++) {
+			noobItems.push(noob[i + 8])
+		}
+
+		let jsItems = [];
+		for (let i = 0; i < js.length - 8; i++) {
+			jsItems.push(js[i + 8])
+		}
+		this.sections = [noobItems, jsItems]
+
+		this.hide({ id: 0 });
+		this.hide({ id: 1 });
+
+		this._addEventListeners();
+    }
+	_addEventListeners() {
+		for (let i = 0; i < this.toggles.length; i++) {
+			this.toggles[i].addEventListener("click", ev => e.toggle(ev.currentTarget) )
+		}
+	}
+	hide(el) {
+		this.sections[el.id].forEach(el => {
+			el.style.display = "none";
+		})
+		el.innerHTML = `More <i class="material-icons">expand_more</i>`
+
+		this.state = false
+	}
+	show(el) {
+		this.sections[el.id].forEach(el => {
+			el.style.display = "block";
+		})
+		el.innerHTML = `Less <i class="material-icons">expand_less</i>`
+		this.state = true;
+	}
+	toggle(el) {
+		if (this.state == true) this.hide(el)
+        else if (this.state == false) this.show(el)
+	}
+}
+
+const e = new Expand()
 
 document.querySelectorAll(".row > a").forEach(el => {
-	el.addEventListener("click", e => {
-		e.preventDefault();
-		localStorage.setItem("CrypToolsLearn", el.hash)
-		window.open(el.href, "_self")
-	})
+    el.addEventListener("click", e => {
+        e.preventDefault();
+        localStorage.setItem("CrypToolsLearn", el.hash)
+        window.open(el.href, "_self")
+    })
 })
