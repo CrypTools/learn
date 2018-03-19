@@ -22,7 +22,7 @@
 - name:     binascii
   fancy:    BinASCII
   question: binascii.md
-  answer:   01100011 01101111 01100100 01100101  
+  answer:   01100011 01101111 01100100 01100101
 - name:     rsa
   fancy:    RSA
   question: rsa.md
@@ -35,6 +35,10 @@
   fancy:    Base64
   question: b64.md
   answer:   Q3J5cFRvb2xz
+- name:     freq
+  fancy:    Frequency Analysis
+  question: frequencyanalysis.md
+  answer:   7
 - name:     bitshift
   fancy:    BitShift Cipher
   question: bitshift.md
