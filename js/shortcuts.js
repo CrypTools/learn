@@ -1,0 +1,1 @@
+'use strict'; Mousetrap.bindGlobal(['command+enter', 'ctrl+enter'], function () { test.test(); return false; }); Mousetrap.bindGlobal(['command+shift+c', 'ctrl+shift+c'], function () { console.clear(); return false; });
