@@ -63,7 +63,7 @@ typings/
 _site/
 .sass-cache/
 .jekyll-metadata
-
+docs
 ### Sass ###
 *.css.map
 

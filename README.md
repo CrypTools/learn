@@ -37,7 +37,7 @@ In the config file (in the `_data` folder), declare your file and your answer us
 You can contribute to our code, but here are some rules to follow before doing any PRs:
 - Make sure that your code is indented with tabs instead of spaces
 - For JavaScript code, use ES7, Babel will compile it to ES5.
-- Make sure you run `jekyll build` after changes. If it fails, run `bundle && jekyll build`
+- Don't worry about building the site, [Travis Ci](https://travis-ci.org/CrypTools/learn) will do it for you.
 
 
 ## Authors
