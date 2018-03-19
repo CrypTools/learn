@@ -6,6 +6,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/license/Cryptools/learn.svg">
     <img src="https://img.shields.io/github/contributors/Cryptools/learn.svg">
+	<img src="https://travis-ci.org/CrypTools/learn.svg?branch=master">
 </p>
 
 ## Welcome to the best platform to learn cryptography
