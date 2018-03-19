@@ -10,7 +10,7 @@ function detectmob() {
 if (detectmob()) {
     document.querySelector(".beoncomp").style.display = "flex";
     document.querySelectorAll(".row")[1].style.display = "none"
-	document.querySelectorAll(".exapnd")[1].style.display = "none"
+	document.querySelectorAll(".expand")[1].style.display = "none"
 }
 
 

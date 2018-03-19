@@ -89,15 +89,15 @@ nav {
 	}
 
 	article {
-		margin-top: calc(96px + 35vh);
+		margin-top: 175px;
 	}
 
 	.levels {
-		margin-top: calc(96px + 35vh) !important;
+		margin-top: 175px !important;
 	}
 
 	footer {
-		margin-top: calc(96px + 35vh);
+		margin-top: 175px;
 	}
 }
 @media (max-width: 740px) {
@@ -164,7 +164,6 @@ article {
 			width: 960px;
 			max-width: 80%;
 			margin: 0 auto;
-			height: calc(60vh - 96px);
 			margin: 0 auto;
 			text-align: left;
 
