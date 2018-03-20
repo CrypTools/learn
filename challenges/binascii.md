@@ -1,0 +1,326 @@
+# Binascii
+
+# How it works?
+
+## Encoding
+
+ASCII stands for **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange.
+
+It's a simple way of encoding characters to numbers.
+
+We can express these characters as hexadecimal (base 16) numbers using this table:
+
+<table>
+	<tbody>
+		<tr>
+			<td>0</td>
+			<td>NUL</td>
+			<td>16</td>
+			<td>DLE</td>
+			<td>32</td>
+			<td>SP</td>
+			<td>48</td>
+			<td>0</td>
+			<td>64</td>
+			<td>@</td>
+			<td>80</td>
+			<td>P</td>
+			<td>96</td>
+			<td>`</td>
+			<td>112</td>
+			<td>p</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>SOH</td>
+			<td>17</td>
+			<td>DC1</td>
+			<td>33</td>
+			<td>!</td>
+			<td>49</td>
+			<td>1</td>
+			<td>65</td>
+			<td>A</td>
+			<td>81</td>
+			<td>Q</td>
+			<td>97</td>
+			<td>a</td>
+			<td>113</td>
+			<td>q</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>STX</td>
+			<td>18</td>
+			<td>DC2</td>
+			<td>34</td>
+			<td>"</td>
+			<td>50</td>
+			<td>2</td>
+			<td>66</td>
+			<td>B</td>
+			<td>82</td>
+			<td>R</td>
+			<td>98</td>
+			<td>b</td>
+			<td>114</td>
+			<td>r</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>ETX</td>
+			<td>19</td>
+			<td>DC3</td>
+			<td>35</td>
+			<td>#</td>
+			<td>51</td>
+			<td>3</td>
+			<td>67</td>
+			<td>C</td>
+			<td>83</td>
+			<td>S</td>
+			<td>99</td>
+			<td>c</td>
+			<td>115</td>
+			<td>s</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>EOT</td>
+			<td>20</td>
+			<td>DC4</td>
+			<td>36</td>
+			<td>$</td>
+			<td>52</td>
+			<td>4</td>
+			<td>68</td>
+			<td>D</td>
+			<td>84</td>
+			<td>T</td>
+			<td>100</td>
+			<td>d</td>
+			<td>116</td>
+			<td>t</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>ENQ</td>
+			<td>21</td>
+			<td>NAK</td>
+			<td>37</td>
+			<td>%</td>
+			<td>53</td>
+			<td>5</td>
+			<td>69</td>
+			<td>E</td>
+			<td>85</td>
+			<td>U</td>
+			<td>101</td>
+			<td>e</td>
+			<td>117</td>
+			<td>u</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>ACK</td>
+			<td>22</td>
+			<td>SYN</td>
+			<td>38</td>
+			<td>&amp;</td>
+			<td>54</td>
+			<td>6</td>
+			<td>70</td>
+			<td>F</td>
+			<td>86</td>
+			<td>V</td>
+			<td>102</td>
+			<td>f</td>
+			<td>118</td>
+			<td>v</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>BEL</td>
+			<td>23</td>
+			<td>ETB</td>
+			<td>39</td>
+			<td>'</td>
+			<td>55</td>
+			<td>7</td>
+			<td>71</td>
+			<td>G</td>
+			<td>87</td>
+			<td>W</td>
+			<td>103</td>
+			<td>g</td>
+			<td>119</td>
+			<td>w</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>BS</td>
+			<td>24</td>
+			<td>CAN</td>
+			<td>40</td>
+			<td>(</td>
+			<td>56</td>
+			<td>8</td>
+			<td>72</td>
+			<td>H</td>
+			<td>88</td>
+			<td>X</td>
+			<td>104</td>
+			<td>h</td>
+			<td>120</td>
+			<td>x</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>HT</td>
+			<td>25</td>
+			<td>EM</td>
+			<td>41</td>
+			<td>)</td>
+			<td>57</td>
+			<td>9</td>
+			<td>73</td>
+			<td>I</td>
+			<td>89</td>
+			<td>Y</td>
+			<td>105</td>
+			<td>i</td>
+			<td>121</td>
+			<td>y</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>LF</td>
+			<td>26</td>
+			<td>SUB</td>
+			<td>42</td>
+			<td>*</td>
+			<td>58</td>
+			<td>:</td>
+			<td>74</td>
+			<td>J</td>
+			<td>90</td>
+			<td>Z</td>
+			<td>106</td>
+			<td>j</td>
+			<td>122</td>
+			<td>z</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>VT</td>
+			<td>27</td>
+			<td>ESC</td>
+			<td>43</td>
+			<td>+</td>
+			<td>59</td>
+			<td>;</td>
+			<td>75</td>
+			<td>K</td>
+			<td>91</td>
+			<td>[</td>
+			<td>107</td>
+			<td>k</td>
+			<td>123</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>FF</td>
+			<td>28</td>
+			<td>FS</td>
+			<td>44</td>
+			<td>,</td>
+			<td>60</td>
+			<td>&lt;</td>
+			<td>76</td>
+			<td>L</td>
+			<td>92</td>
+			<td>\</td>
+			<td>108</td>
+			<td>l</td>
+			<td>124</td>
+			<td>|</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>CR</td>
+			<td>29</td>
+			<td>GS</td>
+			<td>45</td>
+			<td>-</td>
+			<td>61</td>
+			<td>=</td>
+			<td>77</td>
+			<td>M</td>
+			<td>93</td>
+			<td>]</td>
+			<td>109</td>
+			<td>m</td>
+			<td>125</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>SO</td>
+			<td>30</td>
+			<td>RS</td>
+			<td>46</td>
+			<td>.</td>
+			<td>62</td>
+			<td>&gt;</td>
+			<td>78</td>
+			<td>N</td>
+			<td>94</td>
+			<td>^</td>
+			<td>110</td>
+			<td>n</td>
+			<td>126</td>
+			<td>~</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>SI</td>
+			<td>31</td>
+			<td>US</td>
+			<td>47</td>
+			<td>/</td>
+			<td>63</td>
+			<td>?</td>
+			<td>79</td>
+			<td>O</td>
+			<td>95</td>
+			<td>_</td>
+			<td>111</td>
+			<td>o</td>
+			<td>127</td>
+			<td>DEL</td>
+		</tr>
+	</tbody>
+</table>
+
+So we know that `A` correspond to `65` in decimal (base 10).
+
+### Convert decimal to Binary
+- Take any number `N`.
+
+- Keep dividing `N` by `2` and write down the remainder (`0` or `1`)
+- Reverse the list of remainder
+
+- Add padding `0`s at the beginning, so for example if we have `101` and we want an 8-bit stream, we output `00000101`.
+
+# What you need to do?
+Using this explanation, write a program that can **decode** 8 bit stream.
+
+## Requirements
+- Your program should handle stream where there are no space between 8 bit numbers.
+- You should use the following template:
+```js
+String.prototype.decrypt = function() {
+	// to get the String you need to encrypt, use 'this'
+}
+```
