@@ -139,6 +139,21 @@
   tests:
      - word:      rsa()
        expected:  399788195976
+# BinASCII
+- name:           binascii
+  fancy:          BinASCII
+  question:       binascii.md
+  init:           >
+    String.prototype.decrypt = function() {
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:    return '${current.word}'.decrypt()
+  tests:
+    - word:       "010000110111001001111001011100000101010001101111011011110110110001110011"
+      expected:   CrypTools
+    - word:       "0100001001101001011011100100000101010011010000110100100101001001"
+      expected:   BinASCII
+
 # Base64
 - name:           b64
   fancy:          Base64
