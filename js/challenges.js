@@ -1,6 +1,40 @@
 ---
 ---
 
+class Done {
+	constructor() {
+		if (!localStorage.getItem("CrypTools Learn Done")) {
+			this.init()
+		}
+	}
+	init() {
+		localStorage.setItem("CrypTools Learn Done", JSON.stringify({
+			noob: [],
+			js: []
+		}))
+	}
+	get() {
+		const str = localStorage.getItem("CrypTools Learn Done")
+		return JSON.parse(str);
+	}
+	addNoob() {
+		let json = this.get()
+		json.noob.push(...arguments)
+		localStorage.setItem("CrypTools Learn Done", JSON.stringify(json))
+
+	}
+	addJS() {
+		let json = this.get()
+		json.js.push(...arguments)
+		localStorage.setItem("CrypTools Learn Done", JSON.stringify(json))
+	}
+	isDone(id, name) {
+		return this.get()[id].includes(name);
+	}
+}
+
+const done = new Done()
+
 const challengesData = {{site.data.challenges | jsonify}}
 
 let challenges = {}
@@ -67,6 +101,7 @@ class Test {
 		}
 		if (out === true) {
 			console.log("Congratulations 🎉! The code you've written passed the tests.")
+			done.addJS(this.data.name)
 			document.querySelector(".done").style.display = "flex"
 			setTimeout(() => {
 				document.querySelector(".done").classList.add("active")

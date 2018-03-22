@@ -104,10 +104,58 @@ class Expand {
 
 const e = new Expand()
 
+
+class Done {
+	constructor() {
+		if (!localStorage.getItem("CrypTools Learn Done")) {
+			this.init()
+		}
+	}
+	init() {
+		localStorage.setItem("CrypTools Learn Done", JSON.stringify({
+			noob: [],
+			js: []
+		}))
+	}
+	get() {
+		const str = localStorage.getItem("CrypTools Learn Done")
+		return JSON.parse(str);
+	}
+	addNoob() {
+		let json = this.get()
+		json.noob.push(...arguments)
+		localStorage.setItem("CrypTools Learn Done", JSON.stringify(json))
+
+	}
+	addJS() {
+		let json = this.get()
+		json.js.push(...arguments)
+		localStorage.setItem("CrypTools Learn Done", JSON.stringify(json))
+	}
+	isDone(id, name) {
+		return this.get()[id].includes(name);
+	}
+}
+
+const done = new Done()
+
+
 document.querySelectorAll(".row > a").forEach(el => {
     el.addEventListener("click", e => {
         e.preventDefault();
         localStorage.setItem("CrypToolsLearn", el.hash)
         window.open(el.href, "_self")
     })
+})
+
+/* Done */
+document.querySelectorAll(".js > a").forEach(el => {
+	if (done.isDone("js", el.id)) {
+		el.querySelector(".done").style.opacity = 1;
+	}
+})
+document.querySelectorAll(".noob > a").forEach(el => {
+	if (done.isDone("noob", el.id)) {
+		el.querySelector(".done").style.opacity = 1;
+	}
 })
