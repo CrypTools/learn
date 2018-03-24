@@ -31,14 +31,16 @@ description: The best platform to learn cryptography
 	<section id="levels" class="levels">
 		<h2>Levels:</h2>
 		<h3>You don't know code?</h3>
+		<div class="progress">
+			<div class="bg"></div>
+		</div>
 		<div class="row noob">
 			{% for i in site.data.noob %}
 			<a href="./noob#{{i.name}}" target="_blank" id="{{i.name}}">
 				<span class="done"></span>
 				<h1>#{{ forloop.index }}</h1>
 				<h3>{{i.fancy}}</h3>
-			</a>
-			{% endfor %}
+			</a> {% endfor %}
 		</div>
 		<div class="expand">
 			<div class="more" id="0">
@@ -46,14 +48,16 @@ description: The best platform to learn cryptography
 			</div>
 		</div>
 		<h3>Know JavaScript?</h3>
+		<div class="progress">
+			<div class="bg"></div>
+		</div>
 		<div class="row js">
 			{% for i in site.data.challenges %}
 			<a href="./levels#{{i.name}}" target="_blank" id="{{i.name}}">
 				<span class="done"></span>
 				<h1>#{{ forloop.index }}</h1>
 				<h3>{{i.fancy}}</h3>
-			</a>
-			{% endfor %}
+			</a> {% endfor %}
 		</div>
 		<div class="expand">
 			<div class="more" id="1">
