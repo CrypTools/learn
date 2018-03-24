@@ -200,13 +200,13 @@ article {
 			padding: 50px 0;
 
 			.progress {
-				width: calc(0% - 20px);
+				width: 0px;
 				margin-left: 10px;
 				height: 5px;
 				background: #4CAF50;
 				box-sizing: border-box;
 				margin: 10px;
-				transition: width 500ms ease-in-out;
+				transition: width 1s ease-in-out;
 				.bg {
 					&:after {
 						content: '';

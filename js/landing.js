@@ -153,8 +153,6 @@ document.querySelectorAll(".js > a").forEach(el => {
 	if (done.isDone("js", el.id)) {
 		el.querySelector(".done").style.opacity = 1;
 	}
-	const width = (done.get().js.length / document.querySelectorAll(".js > a").length) * 100
-	document.querySelectorAll(".progress")[1].style.width = `calc(${width}% - 20px)`
 })
 document.querySelectorAll(".noob > a").forEach(el => {
 	if (done.isDone("noob", el.id)) {
@@ -163,3 +161,9 @@ document.querySelectorAll(".noob > a").forEach(el => {
 	const width = (done.get().noob.length / document.querySelectorAll(".noob > a").length) * 100
 	document.querySelectorAll(".progress")[0].style.width = `calc(${width}% - 20px)`
 })
+
+const widthJ = (done.get().js.length / document.querySelectorAll(".js > a").length) * 100
+document.querySelectorAll(".progress")[1].style.width = `calc(${widthJ}% - 20px)`
+
+const widthN = (done.get().noob.length / document.querySelectorAll(".noob > a").length) * 100
+document.querySelectorAll(".progress")[0].style.width = `calc(${widthN}% - 20px)`
