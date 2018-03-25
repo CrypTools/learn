@@ -15,6 +15,10 @@
   fancy:    ATBASHCipher
   question: inverse.md
   answer:   XIBKGLLOH
+- name:     vernam
+  fancy:    Vernam Cipher
+  question: vernam.md
+  answer:   XVPCTAQTH
 - name:     railfence
   fancy:    Railfence
   question: railfence.md
