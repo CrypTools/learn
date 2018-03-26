@@ -81,6 +81,21 @@
      - word:      YJXY
        key:       5
        expected:  TEST
+- name:           inverse
+  fancy:          ATBASH Cipher
+  question:       inverse.md
+  init:           >
+    String.prototype.encrypt = function() {
+        // to get the String you need to encrypt, use 'this'
+    }
+  testCommand:    return '${current.word}'.encrypt()
+  tests:
+      - word:     FIND
+        expected: URMW
+      - word:     ME
+        expected: NV
+      - word:     CRYPTOOLS
+        expected: XIBKGLLOH
 
 # Railfence Encrypt
 - name:           railfence-encrypt
