@@ -1,0 +1,11 @@
+---
+---
+{
+	"title": "CrypTools - Learn",
+	"description": "An online platform to learn cryptography",
+	"url": "https://cryptools.github.io/learn",
+	"challenges": {
+		"js": {{site.data.challenges | jsonify}},
+		"noob": {{site.data.noob | jsonify}}
+	}
+}
