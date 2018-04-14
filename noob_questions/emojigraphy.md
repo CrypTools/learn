@@ -4,7 +4,7 @@ the next challenges.
 
 ### Tutorial:
 - On this section, you'll always see the 'course' and the challenge that you need to do
-- On your right (or on the bottom if you're on mobile), there a form. This is where you'll post your answers.
+- On your right (or on the bottom if you're on mobile), there is a form. This is where you'll post your answers.
 > **ProTip 💡:**
 - Press `Enter` to submit your answer.
 
