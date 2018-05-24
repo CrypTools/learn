@@ -11,6 +11,10 @@
   fancy:    Caesar Encrypt
   question: caesar-encrypt.md
   answer:   LIPPS
+- name:     box
+  fancy:    Mysterious Box
+  question: box.md
+  answer:   WINNER
 - name:     inverse
   fancy:    ATBASHCipher
   question: inverse.md
