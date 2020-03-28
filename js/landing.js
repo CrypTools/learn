@@ -14,7 +14,7 @@ if (detectmob()) {
 }
 
 
-class Menu {
+/* class Menu {
     constructor() {
         this.state = false
         this.toggle = document.getElementById("menu-toggle")
@@ -51,7 +51,7 @@ class Menu {
     }
 }
 
-const m = new Menu();
+const m = new Menu(); */
 
 class Expand {
     constructor() {

@@ -1,44 +1,46 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{page.title}}</title>
-        <meta name="description" content="{{page.description}}">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <link rel="shortcut icon" href="favicon.ico">
-        <link rel="apple-touch-icon" href="icon.png">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>{{page.title}}</title>
+	<meta name="description" content="{{page.description}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- stylesheets -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&amp;subset=latin-ext">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://unpkg.com/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-		<!-- OneSignal -->
+	<link rel="shortcut icon" href="{{site.url}}/favicon.ico">
+	<link rel="apple-touch-icon" href="{{site.url}}/icon.png">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+    <link rel="stylesheet" href="{{site.url}}/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- OneSignal -->
 		<link rel="manifest" href="/manifest.json" />
 		<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 		<script>
-			var OneSignal = window.OneSignal || [];
-			OneSignal.push(function() {
-				OneSignal.init({
-					appId: "68df36e3-7043-4bb4-a10c-156da7b9d24c",
-					safari_web_id: "web.onesignal.auto.201c9c11-2835-4563-82b9-55a6f9094e87"
-				});
-			});
+			// var OneSignal = window.OneSignal || [];
+			// OneSignal.push(function() {
+			// 	OneSignal.init({
+			// 		appId: "68df36e3-7043-4bb4-a10c-156da7b9d24c",
+			// 		safari_web_id: "web.onesignal.auto.201c9c11-2835-4563-82b9-55a6f9094e87"
+			// 	});
+			// });
 		</script>
 
 		<meta name="apple-itunes-app" content="app-id={{ site.appID }}">
-    </head>
-    <body>
-        <!--[if lte IE 9]
+</head>
+
+<body>
+	<!--[if lte IE 9]
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        {{content}}
+    {% include nav.html %}
+    {{content}}
+    {% include footer.html %}
 
-        <script async src="https://www.w3counter.com/tracker.js?id=116354"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109503398-2"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109503398-2"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -47,5 +49,10 @@
             gtag('config', 'UA-109503398-2');
         </script>
 		<script src="js/landing.js"></script>
-    </body>
+	<script src="https://cdn.jsdelivr.net/npm/glottologist"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sf-font@1.0.0/stylesheet.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sf-mono@1.0.0/stylesheet.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/lunar-icons@2.1.2/dist/lunar-icons.min.js"></script>
+</body>
+
 </html>
