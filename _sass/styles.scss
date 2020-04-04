@@ -6,7 +6,8 @@
     --white: white;
     --background: white;
     --opposite: #1e1e1e;
-    --semi-white: #eee;
+	--semi-white: #eee;
+	--blue: #0061D9;
 }
 
 .white {
@@ -350,7 +351,7 @@ article {
 					text-align: center;
 					display: inline-block;
 					padding: 12px 64px;
-					background-color: #292929;
+					background-color: var(--blue);
 					color: #fff;
 					text-decoration: inherit;
 					margin-top: 48px;
@@ -390,7 +391,7 @@ article {
 						max-width: 80%;
 						margin: 0 auto;
 						height: 5px;
-						background: rgba(0, 0, 0, 0.1)
+						background: rgba(0, 0, 0, 0.1);
 					}
 				}
 			}
@@ -425,7 +426,7 @@ article {
 
 					h3 {
 						color: #fff;
-						background-color: #292929;
+						background-color: var(--blue);
 						margin: 32px 0 0;
 						padding: 24px 0;
 					}
@@ -455,7 +456,7 @@ article {
 					box-sizing: border-box;
 					text-align: center;
 					padding: 12px 64px;
-					background-color: #292929;
+					background-color: var(--blue);
 					color: #fff;
 					text-decoration: inherit;
 					margin-top: 48px;
