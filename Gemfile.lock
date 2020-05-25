@@ -10,7 +10,7 @@ GEM
     colorator (1.1.0)
     cssminify2 (2.0.1)
     execjs (2.7.0)
-    ffi (1.9.23)
+    ffi (1.12.2)
     forwardable-extended (2.6.0)
     htmlcompressor (0.4.0)
     jekyll (3.6.2)
