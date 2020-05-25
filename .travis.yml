@@ -2,7 +2,7 @@ language:       ruby
 
 install:
   # Install Jekyll and dependencies
-  - sudo gem install jekyll bundler
+  - gem install jekyll bundler
   - gem update --system
   - bundle install
 script:
