@@ -6,7 +6,7 @@ highlighter: rouge
 
 permalink:   pretty
 
-url:         cryptools.github.io/learn
+url:         https://cryptools.github.io/learn
 
 plugins:
     - jekyll-babel
