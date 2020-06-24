@@ -16,7 +16,7 @@
   question: box.md
   answer:   WINNER
 - name:     inverse
-  fancy:    ATBASHCipher
+  fancy:    Atbash Cipher
   question: inverse.md
   answer:   XIBKGLLOH
 - name:     vernam
