@@ -9,7 +9,7 @@
 	<img src="https://travis-ci.org/CrypTools/learn.svg?branch=master">
 </p>
 
-## Welcome to the best platform to learn cryptography
+## Welcome to the best platform to learn cryptography !
 
 > Cryptography is the art of writing and solving problems in order to prevent third parties or the public from reading private messages. And as any art, it can be taught. This was our mission by creating this platform. You'll have some challenges to complete, the first ones are easy, but don't worry, it will get much harder after some point.
 
